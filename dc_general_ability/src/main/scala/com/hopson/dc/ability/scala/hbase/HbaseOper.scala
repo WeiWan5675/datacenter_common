@@ -10,11 +10,16 @@ import com.hopson.dc.ability.scala.hbase.HbaseOperType.HbaseOperType
  * @Description:
  **/
 class HbaseOper {
-  var hbaseOperType: HbaseOperType = null;
+
+  var colls : Map[String,String] = null
+  var operType: HbaseOperType = null;
   var table: String = null;
   var family: String = null;
-  var infos: List[String] = null;
-  var rowkeys: List[String] = null;
+  var infos: Array[String] = null;
+  var rowkeys: Array[String] = null;
+  var rowKey: String  = null;
+  var startKey : String = null;
+  var endKey : String = null;
 
 }
 

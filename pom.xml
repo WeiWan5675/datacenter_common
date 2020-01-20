@@ -44,6 +44,14 @@
                 <artifactId>hbase-server</artifactId>
                 <version>1.2.0</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+            <dependency>
+                <groupId>org.scalatest</groupId>
+                <artifactId>scalatest_2.10</artifactId>
+                <version>3.2.0-SNAP10</version>
+                <scope>test</scope>
+            </dependency>
+
         </dependencies>
 
 
