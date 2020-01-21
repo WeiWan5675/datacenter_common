@@ -2,6 +2,8 @@ package com.hopson.dc.ability.scala.hbase
 
 import com.hopson.dc.ability.scala.hbase.HbaseOperType.HbaseOperType
 
+import scala.collection.mutable.ListBuffer
+
 /**
  * @Author: xiaozhennan
  * @Date: 2020/1/13 15:52
@@ -11,7 +13,7 @@ import com.hopson.dc.ability.scala.hbase.HbaseOperType.HbaseOperType
  **/
 class HbaseOper {
 
-  var colls : Map[String,String] = null
+  var datas : ListBuffer[HbaseData]= null
   var operType: HbaseOperType = null;
   var table: String = null;
   var family: String = null;
@@ -20,7 +22,6 @@ class HbaseOper {
   var rowKey: String  = null;
   var startKey : String = null;
   var endKey : String = null;
-
 }
 
 object HbaseOperType extends Enumeration {
@@ -34,4 +35,11 @@ object HbaseOperType extends Enumeration {
 
   def checkExists(day: String) = this.values.exists(_.toString == day) //检测是否存在此枚举值
   def showAll = this.values.foreach(println) // 打印所有的枚举值
+}
+
+
+class HbaseData{
+  var tableName = null
+  var rowKey = null
+  var data = Map[String,String] = null
 }

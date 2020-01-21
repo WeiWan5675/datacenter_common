@@ -18,6 +18,10 @@ import scala.collection.JavaConverters._
  * @Description:
  **/
 class HbaseCore {
+  def insertRow(table: Table, rowkeys: Array[String], data: HbaseOper) = {
+
+  }
+
 
   private val hbaseFactory: HbaseFactory = HbaseFactory.getInstance()
   private val conn: Connection = hbaseFactory.getConnection()
@@ -34,7 +38,7 @@ class HbaseCore {
       case HbaseOperType.SCAN_QUERY =>
         this.scanQuery(table, oper.startKey, oper.endKey, oper.infos)
       case HbaseOperType.INSERT_ROW =>
-        this.insertRow(table,oper.rowkeys,oper.colls)
+        this.insertRow(table,oper.rowkeys,oper.hbaseData)
         null
       case HbaseOperType.DELETE_ROW =>
         null
