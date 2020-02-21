@@ -1,0 +1,17 @@
+<assembly>
+    <id>all</id>
+    <!-- 最终打包成一个用于发布的zip文件 -->
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>./</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <unpack>false</unpack>
+        </dependencySet>
+    </dependencySets>
+
+</assembly>

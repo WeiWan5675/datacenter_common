@@ -27,16 +27,18 @@ public class HbaseFactory {
     private HbaseFactory() {
     }
 
-    private Configuration hbaseCfg = null;
-    private Config config = null;
+    protected static Configuration hbaseCfg = null;
+    protected static Config config = null;
     private Connection conn;
-
     private Admin hbaseAdmin;
     private boolean init_flag = false;
 
     public static HbaseFactory getInstance() {
         if (instance != null) {
-            return instance;
+            synchronized (HbaseFactory.class) {
+                HbaseFactory.build(config);
+                return instance;
+            }
         }
         return null;
     }

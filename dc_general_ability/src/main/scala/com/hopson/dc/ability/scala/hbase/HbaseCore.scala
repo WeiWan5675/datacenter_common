@@ -38,7 +38,7 @@ class HbaseCore {
       case HbaseOperType.SCAN_QUERY =>
         this.scanQuery(table, oper.startKey, oper.endKey, oper.infos)
       case HbaseOperType.INSERT_ROW =>
-        this.insertRow(table,oper.rowkeys,oper.hbaseData)
+        this.insertRow(table,oper.rowkeys,oper.datas)
         null
       case HbaseOperType.DELETE_ROW =>
         null
