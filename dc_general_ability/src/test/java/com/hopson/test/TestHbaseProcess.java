@@ -1,10 +1,8 @@
 package com.hopson.test;
 
 import com.hopson.dc.ability.java.hbase.HbaseFactory;
-import com.hopson.dc.ability.scala.hbase.HbaseCore;
 import com.hopson.dc.common.config.Config;
 import com.hopson.dc.common.config.ConfigHolder;
-import org.apache.hadoop.hbase.client.Connection;
 
 import java.io.IOException;
 
